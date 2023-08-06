@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "b91939ad-16de-4e86-97dc-6e513d079e08",
+		"name": "task manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22320647"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"oamr ehab\",\r\n    \"email\" : \"omarehabsa@gmail.com\",\r\n    \"password\": \"this is my new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmMzMzA0ZjVlZjZkMmVjYTBiMGYiLCJpYXQiOjE2OTEyMjEwNDN9.DCgYt3pYE_bXCuFKLDKgdcccLA78rRsyFBelUmIXxYY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout from all devicess",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmMzMzA0ZjVlZjZkMmVjYTBiMGYiLCJpYXQiOjE2OTEyMjEzOTN9.35eLmCA5MFAW9VTqedtL_TE_g93OPsGwOpPVpCR0BQI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/logoutAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"logoutAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"omarehabsa@gmail.com\",\r\n    \"password\" : \"this is my new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmMzMzA0ZjVlZjZkMmVjYTBiMGYiLCJpYXQiOjE2OTEyMjE1MDd9.9X1CY6M75o7WQOGL17ifsEQ4juqyyr9krTn4ud4lWbU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmMzMzA0ZjVlZjZkMmVjYTBiMGYiLCJpYXQiOjE2OTEyMjE1MDd9.9X1CY6M75o7WQOGL17ifsEQ4juqyyr9krTn4ud4lWbU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/C:/Users/ehab/Downloads/Copy of شهادة تقدير بيضاء مزينة بزهور.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/users/me/avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"me",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get avatar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/64cdfe658574f793fe6bd091/avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"64cdfe658574f793fe6bd091",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete avatar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/me/avatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"me",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"i like this name\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/me",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"this is a new task\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks?completed=false&createdAt:desc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "completed",
+									"value": "false"
+								},
+								{
+									"key": "createdAt:desc",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/64ce0193e0305a98e4372b9e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								"64ce0193e0305a98e4372b9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"completed\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/tasks/64ce0193e0305a98e4372b9e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								"64ce0193e0305a98e4372b9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get task by id Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGNkZmU2NTg1NzRmNzkzZmU2YmQwOTEiLCJpYXQiOjE2OTEyMjE2MDV9.HWF8iNQRVBjUpqHZv4GGsvMHHvCTIsdHxmBOVAmwcRU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/tasks/64ce0193e0305a98e4372b9e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"tasks",
+								"64ce0193e0305a98e4372b9e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
